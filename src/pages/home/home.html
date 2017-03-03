@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      5000 items
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list [virtualScroll]="photos" approxItemHeight="75px"> 
+    <ion-item *virtualItem="let photo">
+      <ion-thumbnail item-left>
+        <ion-img [src]="photo.thumbnailUrl"></ion-img>
+      </ion-thumbnail>
+      <h2>{{ photo.title }}</h2>
+      <p>{{ photo.url }}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
